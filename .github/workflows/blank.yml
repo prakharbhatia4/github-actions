@@ -28,7 +28,9 @@ jobs:
         run: echo Hello, world!
 
       - name: run script plan
-        run: ./plan.sh
+        run: |
+          chmod +x ./plan.sh
+          ./plan.sh
         shell: bash
 
   deploy:
@@ -40,5 +42,7 @@ jobs:
         run: echo hey there!
       
       - name: run script plan
-        run: ./apply.sh
+        run: |
+          chmod +x ./apply.sh
+          ./apply.sh
         shell: bash
